@@ -15,11 +15,6 @@ inquirer
       name: "Description"
     },
     {
-      type: " input",
-      message: "Please type out a Table of Contents for your readme",
-      name: " ToC"
-    },
-    {
       type: "input",
       message: "Please type instaltion details",
       name: "installation"
@@ -30,33 +25,68 @@ inquirer
       name: "usage"
     },
     {
-      type: "input",
+      type: "list",
       message: "Please type the License for the readme",
-      name: "License"
+      choices: ["Apache License 2.0", "GNU General Public License v3.0", "MIT license", "BSD 2-Clause", "BDS 3-Clause", "Boost Software License 1.0", "Creative Commons Zero v1.0 ", "Eclipse Public License 2.0", "GNU AFfero General Public License v3.0", "GNU AFfero General Public License v2.0", "GNU AFfero General Public License v2.1", "Mozilla Public License 2.0", "The Unlicense"],
+      name: "license"
     },
     {
       type: "input",
-      message: "any contributers you'd like to mention in the readme? ",
-      name: "contributions"
+      message: "any contributers you'd like to mention or guild lines for contributions in the readme? ",
+      name: "contributing"
     },
     {
       type: "input",
       message: "What tests were used?",
-      name: " "
+      name: "tests"
     },
     {
       type: "input",
-      message: "Please type any questions you woud like in the readme ",
-      name: "questions"
-    }
+      message: "What is your Github username?",
+      name: "username"
+    },
+    {
+      type: "input",
+      message: "What is your email?",
+      name: "email"
+    },
+    
   ])
   .then((responses) => {
     // Construct the README content using the user responses
     const readme = `
 # ${responses.title}
 
-## Description
-${responses.description}
+##### ${responses.description}
+
+# #table of contents 
+- [Title](#title)
+- [Description](#description)
+- [Instaltion](#instaltion)
+- [Usage](#usage)
+- [Contributions](#contributions)
+- [Tests](#tests)
+- [License](#license)
+- [Questiosn](#questions)
+
+## Instaltion
+##### ${responses.instaltions}
+
+## Usage
+##### ${responses.usage}
+
+## Contributions
+##### ${responses.contributing}
+
+## Tests
+##### ${responses.tests}
+
+## License
+##### ${responses.license}
+
+## Questions
+##### For more of my work, checkout my github! ${responses.username} 
+##### Any addtional questions? you can reach me at ${responses.email}
 
 `;
 
