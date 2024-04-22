@@ -12,7 +12,7 @@ inquirer
     {
       type: " input",
       message: "Please type a desciption of your project",
-      name: "Description"
+      name: "description"
     },
     {
       type: "input",

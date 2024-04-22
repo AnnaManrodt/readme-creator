@@ -1,9 +1,9 @@
 
-# I love lulu bell 
+# babes picture gentorateor 
 
-##### undefined
+##### this project genrates picutre of the babes 
 
-##table of contents 
+# #table of contents 
 - [Title](#title)
 - [Description](#description)
 - [Instaltion](#instaltion)
@@ -13,22 +13,22 @@
 - [License](#license)
 - [Questiosn](#questions)
 
-##Instaltion
-#####undefined
+## Instaltion
+##### undefined
 
-##Usage
-#####details inculde meowing like a little babes 
+## Usage
+##### please use to view beautiful picture of the sqearkers 
 
-##Contributions
-#####id like to thank the sqeakers and my husband 
+## Contributions
+##### just babes and my hsband 
 
-##Tests
-#####no tests she is too good for them 
+## Tests
+##### none at this time 
 
-##License
-#####MIT license
+## License
+##### MIT license
 
-##Questions
+## Questions
 ##### For more of my work, checkout my github! https://github.com/AnnaManrodt 
-##### Any addtional questions? you can reach me at anna@manrodts.com
+##### Any addtional questions? you can reach me at anna.manrodt@gmail.com
 
