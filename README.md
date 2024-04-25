@@ -1,9 +1,9 @@
 
-# babes picture gentorateor 
+# My Readme File Creator
 
-##### this project genrates picutre of the babes 
+##### this project creates a read me file using nodejs. This program will ask the user questiosn about there project and gentorate a readme file off of those responses
 
-# #table of contents 
+## table of contents 
 - [Title](#title)
 - [Description](#description)
 - [Instaltion](#instaltion)
@@ -14,21 +14,20 @@
 - [Questiosn](#questions)
 
 ## Instaltion
-##### undefined
+##### none at this time
 
 ## Usage
-##### please use to view beautiful picture of the sqearkers 
+##### No usage detials at this time 
 
 ## Contributions
-##### just babes and my hsband 
+##### I likd to thank my bootcamp class for all they have taught me. No contribtuions at this time.
 
 ## Tests
-##### none at this time 
+##### None at this time.
 
 ## License
 ##### MIT license
 
 ## Questions
 ##### For more of my work, checkout my github! https://github.com/AnnaManrodt 
-##### Any addtional questions? you can reach me at anna.manrodt@gmail.com
-
+##### Any addtional questions? you can reach me at anna.manrodts@gmail.com

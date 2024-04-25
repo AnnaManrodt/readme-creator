@@ -59,7 +59,7 @@ inquirer
 
 ##### ${responses.description}
 
-# #table of contents 
+## table of contents 
 - [Title](#title)
 - [Description](#description)
 - [Instaltion](#instaltion)
@@ -70,7 +70,7 @@ inquirer
 - [Questiosn](#questions)
 
 ## Instaltion
-##### ${responses.instaltions}
+##### ${responses.installation}
 
 ## Usage
 ##### ${responses.usage}
