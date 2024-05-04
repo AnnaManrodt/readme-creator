@@ -27,7 +27,7 @@ inquirer
     {
       type: "list",
       message: "Please type the License for the readme",
-      choices: ["Apache License 2.0", "GNU General Public License v3.0", "MIT license", "BSD 2-Clause", "BDS 3-Clause", "Boost Software License 1.0", "Creative Commons Zero v1.0 ", "Eclipse Public License 2.0", "GNU AFfero General Public License v3.0", "GNU AFfero General Public License v2.0", "GNU AFfero General Public License v2.1", "Mozilla Public License 2.0", "The Unlicense"],
+      choices: ["Apache License 2.0", "MIT license", "BSD 2-Clause", "BSD 3-Clause", "Boost Software License 1.0", "Creative Commons Zero v1.0 ", "Eclipse Public License 1.0", "GNU AFfero General Public License v3.0", "GNU AFfero General Public License v2.0", "Mozilla Public License 2.0", "The Unlicense"],
       name: "license"
     },
     {
@@ -55,15 +55,48 @@ inquirer
   .then((responses) => {
     // Construct the README content using the user responses
 
-    const licenseBadges = {
-      "Apache License 2.0": "[![License: Apache License 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)",
-      "GNU General Public License v3.0": "[![License: GPL v3.0](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)",
-      // Add more license badges as needed
-  };
-  
+    let licenseBadge = '';
+function getLincseBadge(){
+  //if statement to detmerin license badge
+  if(responses.license == "Apache License 2.0"){
+    licenseBadge =` [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
+  }
+  else if(responses.license == "MIT license"){
+    licenseBadge =`[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
+  }
+  else if(responses.license == "BSD 2-Clause License"){
+    licenseBadge =`[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)`
+  }
+  else if(responses.license == "BSD 3-Clause License"){
+    licenseBadge =`[![License](https://img.shields.io/badge/License-BSD_3--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)`
+  }
+  else if(responses.license == "Boost Software License 1.0"){
+    licenseBadge =`[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)`
+  }
+  else if(responses.license == "Creative Commons Zero v1.0"){
+    licenseBadge =`[![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)](http://creativecommons.org/publicdomain/zero/1.0/)`
+  }
+  else if(responses.license == "Eclipse Public License 1.0"){
+    licenseBadge =`[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)`
+  }
+  else if(responses.license == "GNU AFfero General Public License v2.0"){
+    licenseBadge =`[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)`
+  }
+  else if(responses.license == "Mozilla Public License 2.0"){
+    licenseBadge =`[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`
+  }
+  else if(responses.license == "The Unlicense"){
+  licenseBadge =``
+  }
+  else{
+    console.log('please pick valid lincses')
+  }
+  return licenseBadge;
+}
+let pickedLicenseBadge = getLincseBadge();
     const readme = `
-# ${responses.title}
-    ${selectedLicenseBadge}  /
+
+# ${responses.title} ${pickedLicenseBadge} 
 ##### ${responses.description}
 
 ## Table of Contents 
@@ -74,7 +107,7 @@ inquirer
 - [Contributions](#contributions)
 - [Tests](#tests)
 - [License](#license)
-- [Questiosn](#questions)
+- [Questiosn](#questions{})
 
 ## Instaltion
 ##### ${responses.installation}
