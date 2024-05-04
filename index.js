@@ -54,12 +54,19 @@ inquirer
   ])
   .then((responses) => {
     // Construct the README content using the user responses
+
+    const licenseBadges = {
+      "Apache License 2.0": "[![License: Apache License 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)",
+      "GNU General Public License v3.0": "[![License: GPL v3.0](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)",
+      // Add more license badges as needed
+  };
+  
     const readme = `
 # ${responses.title}
-
+    ${selectedLicenseBadge}  /
 ##### ${responses.description}
 
-## table of contents 
+## Table of Contents 
 - [Title](#title)
 - [Description](#description)
 - [Instaltion](#instaltion)
